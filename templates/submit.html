@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Submit{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+      <label for="message">Please leave a message:</label><br>
+      <input type="text" name="message" id="message"> <br>
+      <label for="handle">Your name or handle:</label><br>
+      <input type="text" name="handle" id="handle"> <br>
+      <input type="submit" value="Submit message">
+  </form>
+
+  {% if epilogue %}
+     <br> 
+     Thank for your submission, {{handle}}! Your message is under below: <br>
+     {{message}}
+  {% endif %}
+
+{% endblock %}

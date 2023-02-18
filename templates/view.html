@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}messages history{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <ul>
+      {% for m in messages %}
+      <p> {{m[2]}} </p> 
+      <p> -- {{m[1]}} </p> <br>
+      {% endfor %}
+  </ul>
+
+
+{% endblock %}

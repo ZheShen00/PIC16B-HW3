@@ -1,0 +1,21 @@
+<!doctype html>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>{% block title %}{% endblock %} - Message Bank</title>
+<nav>
+	<h1>Message Bank</h1>
+	<!-- <b>Navigation:</b> -->
+  	<ul>
+		<li><a href="{{ url_for('submit') }}">Submit a message</a></li>
+		<li><a href="{{ url_for('view')}}">View messages</a></li>
+	</ul>
+</nav>
+<section class="content">
+	<header>
+		{% block header %} Welcome to the Message Bank!{% endblock %}
+ </header>
+ {% block content %}
+ 	<p>Please feel free to leave a message along with your name or handle.</p>
+ 	<p>Or you can check 3 random messages in Message Bank by clicking the button of View messages </p>
+ 	{% endblock %}
+</section>
